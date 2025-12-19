@@ -1,0 +1,36 @@
+/* ===========================
+   APP LAYOUT
+   =========================== */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Secciones generales */
+section {
+  padding: var(--spacing-2xl) 0;
+  min-height: auto;
+}
+
+/* Alternancia de fondos para secciones */
+section:nth-child(even) {
+  background-color: var(--color-background-alt);
+}
+
+section:nth-child(odd) {
+  background-color: var(--color-background);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  section {
+    padding: var(--spacing-xl) 0;
+  }
+}
