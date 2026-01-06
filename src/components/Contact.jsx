@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { FiMail, FiLinkedin, FiGithub, FiSend } from 'react-icons/fi'
+import { FiMail, FiLinkedin, FiGithub, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi'
+import emailjs from '@emailjs/browser'
 import '../styles/Contact.css'
 
 const Contact = () => {
@@ -8,6 +9,8 @@ const Contact = () => {
     email: '',
     message: ''
   })
+  const [isLoading, setIsLoading] = useState(false)
+  const [status, setStatus] = useState({ type: '', message: '' })
 
   const handleChange = (e) => {
     setFormData({
@@ -17,18 +20,65 @@ const Contact = () => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    // Aquí puedes integrar un servicio de email como EmailJS, Formspree, etc.
-    // Por ahora, redirige al correo con mailto
-    const subject = `Contacto desde Portfolio - ${formData.name}`
-    const body = `Nombre: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMensaje:%0D%0A${formData.message}`
-    window.location.href = `mailto:tu@email.com?subject=${subject}&body=${body}`
+    e.preventDefault() // Previene el submit por defecto
+    setIsLoading(true)
+    setStatus({ type: '', message: '' })
+
+    // ========================================
+    // 🔧 CONFIGURACIÓN DE EMAILJS
+    // ========================================
+    const serviceID = 'service_gd07ows'        // ✅ Service ID configurado
+    const templateID = 'template_3sdhpb4'      // ✅ Template ID configurado
+    
+    // Public Key: Obtén este valor desde EmailJS Dashboard → Account → General
+    const publicKey = 'nxVM9epEaXSln63ID'    // 👈 REEMPLAZA CON TU PUBLIC KEY
+    
+    // ========================================
+    // ENVÍO DE EMAIL
+    // ========================================
+    // IMPORTANTE: Los nombres de las variables deben coincidir EXACTAMENTE
+    // con los nombres en el template de EmailJS: {{name}}, {{email}}, {{message}}
+    emailjs.send(
+      serviceID,
+      templateID,
+      {
+        name: formData.name,       // Variable {{name}} en el template
+        email: formData.email,     // Variable {{email}} en el template
+        message: formData.message  // Variable {{message}} en el template
+      },
+      publicKey
+    )
+    .then((response) => {
+      console.log('✅ Email enviado exitosamente:', response)
+      
+      // Mostrar mensaje de éxito
+      setStatus({ 
+        type: 'success', 
+        message: '¡Mensaje enviado con éxito! Te responderé pronto.' 
+      })
+      
+      // Resetear formulario
+      setFormData({ name: '', email: '', message: '' })
+    })
+    .catch((error) => {
+      console.error('❌ Error al enviar email:', error)
+      
+      // Mostrar mensaje de error
+      setStatus({ 
+        type: 'error', 
+        message: 'Error al enviar el mensaje. Por favor intenta nuevamente.' 
+      })
+    })
+    .finally(() => {
+      // Desactivar estado de carga
+      setIsLoading(false)
+    })
   }
 
   const contactInfo = {
-    email: 'tu@email.com',
-    linkedin: 'https://linkedin.com/in/tu-perfil',
-    github: 'https://github.com/tu-usuario'
+    email: 'osvaldobarcos179@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/osvaldo-barcos-748239270',
+    github: 'https://github.com/Osva-Barcos'
   }
 
   return (
@@ -49,13 +99,13 @@ const Contact = () => {
             </p>
 
             <div className="contact-methods">
-              <a href={`mailto:${contactInfo.email}`} className="contact-method">
+              <div className="contact-method contact-method-static">
                 <FiMail size={24} />
                 <div>
                   <h4>Email</h4>
                   <p>{contactInfo.email}</p>
                 </div>
-              </a>
+              </div>
 
               <a 
                 href={contactInfo.linkedin} 
@@ -126,15 +176,29 @@ const Contact = () => {
               />
             </div>
 
-            <button type="submit" className="btn btn-primary">
-              <FiSend size={18} />
-              Enviar Mensaje
+            {/* Mensajes de estado */}
+            {status.message && (
+              <div className={`form-status ${status.type}`}>
+                {status.type === 'success' ? <FiCheck size={18} /> : <FiAlertCircle size={18} />}
+                <span>{status.message}</span>
+              </div>
+            )}
+
+            <button 
+              type="submit" 
+              className="btn btn-primary"
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <>Enviando...</>
+              ) : (
+                <>
+                  <FiSend size={18} />
+                  Enviar Mensaje
+                </>
+              )}
             </button>
           </form>
-        </div>
-
-        <div className="contact-note">
-          <p>💡 <strong>Nota:</strong> Actualiza tu email y enlaces de redes sociales en <code>Contact.jsx</code></p>
         </div>
       </div>
     </section>

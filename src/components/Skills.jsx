@@ -4,12 +4,13 @@ import '../styles/Skills.css'
 const Skills = () => {
   const skillsData = {
     technical: [
-      { category: 'Lenguajes', items: ['Java', 'Python', 'JavaScript', 'SQL'] },
+      { category: 'Lenguajes', items: ['Java', 'Python', 'JavaScript', 'SQL', 'TypeScript', 'HTML', 'CSS'] },
       { category: 'Frameworks', items: ['React', 'Spring Boot', 'Node.js', 'Express'] },
-      { category: 'Bases de Datos', items: ['MySQL', 'PostgreSQL', 'MongoDB'] },
-      { category: 'Testing', items: ['JUnit', 'Selenium', 'Jest', 'Postman'] },
+      { category: 'Bases de Datos', items: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite'] },
+      { category: 'Testing & QA', items: ['JUnit', 'Selenium', 'Jest', 'Supertest', 'Testing manual', 'Diseño de casos de prueba', 'Documentación de pruebas'] },
       { category: 'Control de Versiones', items: ['Git', 'GitHub', 'GitLab'] },
-      { category: 'Herramientas', items: ['VS Code', 'IntelliJ IDEA', 'Docker', 'Jira'] }
+      { category: 'Herramientas', items: ['VS Code', 'IntelliJ IDEA', 'Docker', 'Jira', 'Postman', 'pgAdmin'] },
+      { category: 'IA & Visión por Computadora', items: ['Machine Learning', 'Visión por Computadora', 'YOLO / DeepSort', 'OpenCV'] }
     ],
     methodologies: [
       'UML (Casos de Uso, Diagramas de Clases, Secuencia)',
@@ -17,7 +18,10 @@ const Skills = () => {
       'Diseño de APIs RESTful',
       'Metodologías Ágiles (Scrum, Kanban)',
       'Testing Manual y Automatizado',
-      'Documentación Técnica'
+      'Diseño y Ejecución de Casos de Prueba',
+      'Trazabilidad de Requerimientos y Casos de Prueba',
+      'Documentación Funcional y Técnica',
+      'Análisis de Procesos de Negocio'
     ]
   }
 

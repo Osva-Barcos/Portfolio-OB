@@ -5,10 +5,10 @@ import '../styles/Education.css'
 const Education = () => {
   const education = {
     university: {
-      degree: 'Ingeniería en Sistemas',
-      institution: '[Nombre de la Universidad]',
-      period: '[Año inicio] - [Año fin / Actualidad]',
-      status: 'En curso / Completado',
+      degree: 'Ingeniería en Sistemas de Información',
+      institution: '[U.T.N Facultad Regional San Francisco]',
+      period: '[2022] - [2026 / previsto]',
+      status: 'En curso',
       description: 'Formación en análisis, diseño y desarrollo de sistemas de información, con énfasis en metodologías de desarrollo de software y aseguramiento de calidad.'
     },
     courses: [
@@ -53,8 +53,8 @@ const Education = () => {
               <p className="description">{education.university.description}</p>
             </div>
           </div>
-
-          {/* Cursos y Certificaciones */}
+        {/*
+          -- Cursos Complementarios --
           <div className="courses-section">
             <h3 className="subsection-title">
               <FiAward size={24} />
@@ -75,12 +75,7 @@ const Education = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="education-note">
-            <p>💡 <strong>Nota:</strong> Reemplaza esta información con tus datos académicos reales.</p>
-            <p>Edita el archivo <code>Education.jsx</code> y actualiza el objeto <code>education</code>.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
