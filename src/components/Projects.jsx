@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import { FiGithub, FiExternalLink, FiChevronDown, FiChevronUp, FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import '../styles/Projects.css'
+import panelAdmin from '../images/panel_admin.PNG'
+import proyecto1Deteccion from '../images/proyecto1_deteccion.PNG'
+import proyecto1Inventario from '../images/proyecto1_inventario.PNG'
+import casosPrueba from '../images/casosprueba.png'
+import resultados from '../images/resultados.png'
+import test1 from '../images/test1.png'
 
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null)
@@ -25,15 +31,15 @@ const Projects = () => {
       },
       images: [
         {
-          src: 'src\\images\\panel_admin.PNG',  // 👈 Reemplaza con tu ruta
+          src: panelAdmin,
           caption: 'Panel de control principal'
         },
         {
-          src: 'src\\images\\proyecto1_deteccion.PNG',  // 👈 Reemplaza con tu ruta
+          src: proyecto1Deteccion,
           caption: 'Reconocimiento de productos en tiempo real'
         },
         {
-          src: 'src\\images\\proyecto1_inventario.PNG',  // 👈 Reemplaza con tu ruta
+          src: proyecto1Inventario,
           caption: 'Administración de inventario y transferencias'
         }
       ],
@@ -67,9 +73,9 @@ const Projects = () => {
       technologies: ['JUnit', 'Selenium', 'Jest', 'Supertest'],
       featured: true,
       images: [
-        { src: 'src\\images\\casosprueba.png', caption: 'Creación de casos de prueba automatizados y manuales' },
-        { src: 'src\\images\\resultados.png', caption: 'Algunos resultados obtenidos' },
-        { src: 'src\\images\\test1.png', caption: 'Testing Automatizado' }
+        { src: casosPrueba, caption: 'Creación de casos de prueba automatizados y manuales' },
+        { src: resultados, caption: 'Algunos resultados obtenidos' },
+        { src: test1, caption: 'Testing Automatizado' }
       ],
       details: {
         context: 'PetNet es una aplicación creada para facilitar el proceso de adopción de mascotas, permitiendo publicar animales en adopción y conectar a personas interesadas en adoptar con refugios y particulares. El objetivo del proyecto es centralizar la información, mejorar la visibilidad de los animales en adopción y agilizar un proceso que normalmente se realiza de forma desorganizada o informal.',
