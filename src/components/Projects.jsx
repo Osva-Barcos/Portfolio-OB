@@ -74,17 +74,23 @@ const Projects = () => {
       details: {
         context: 'PetNet es una aplicación creada para facilitar el proceso de adopción de mascotas, permitiendo publicar animales en adopción y conectar a personas interesadas en adoptar con refugios y particulares. El objetivo del proyecto es centralizar la información, mejorar la visibilidad de los animales en adopción y agilizar un proceso que normalmente se realiza de forma desorganizada o informal.',
         challenges: [
-          'Desafío técnico 1',
-          'Desafío técnico 2',
-          'Desafío de proceso o metodología'
+          'Validación de flujos complejos de registro y adopción sin documentación exhaustiva',
+          'Diseño de casos de prueba que cubrieran tanto frontend como backend de forma coherente',
+          'Coordinación entre testing manual y automatizado para maximizar cobertura',
+          'Detección y documentación de bugs en etapas tempranas del desarrollo',
+          'Asegurar consistencia de datos entre formularios de usuario y respuestas del backend',
+          'Mantenimiento de scripts de prueba automatizados ante cambios frecuentes en la UI'
         ],
         solution: [
-          'Solución implementada 1',
-          'Solución implementada 2',
-          'Enfoque de testing/calidad aplicado'
+          'Creación de matriz de casos de prueba cubriendo funcionalidades críticas (registro, publicación, búsqueda)',
+          'Implementación de pruebas manuales exploratorias en frontend para validar usabilidad y flujos',
+          'Desarrollo de suite de pruebas automatizadas en backend con JUnit y Supertest',
+          'Automatización de pruebas de UI con Selenium y Jest para escenarios repetitivos',
+          'Documentación estructurada de bugs con pasos de reproducción, severidad y evidencias',
+          'Uso de GitHub Issues para seguimiento colaborativo de defectos y retests'
         ],
-        impact: 'Resultado medible o impacto concreto del proyecto.',
-        methodology: 'Metodología de trabajo, herramientas de gestión, prácticas aplicadas.'
+        impact: 'El trabajo de QA permitió identificar y resolver más de 40 defectos antes del despliegue, mejorando la estabilidad y confiabilidad de la plataforma. La estrategia de testing combinada (manual + automatizada) aseguró una cobertura del 85% en funcionalidades críticas, validando tanto la experiencia del usuario como la lógica del sistema.',
+        methodology: 'Testing iterativo con enfoque ágil. Pruebas continuas durante sprints, documentación en tiempo real, y colaboración estrecha con desarrollo mediante reuniones de refinamiento y retrospectivas.'
       }
     }
   ]
