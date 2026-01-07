@@ -25,15 +25,15 @@ const Projects = () => {
       },
       images: [
         {
-          src: '/src/assets/images/proyecto1-dashboard.jpg',  // 👈 Reemplaza con tu ruta
+          src: 'src\\images\\panel_admin.PNG',  // 👈 Reemplaza con tu ruta
           caption: 'Panel de control principal'
         },
         {
-          src: '/src/assets/images/proyecto1-reconocimiento.jpg',  // 👈 Reemplaza con tu ruta
+          src: 'src\\images\\proyecto1_deteccion.PNG',  // 👈 Reemplaza con tu ruta
           caption: 'Reconocimiento de productos en tiempo real'
         },
         {
-          src: '/src/assets/images/proyecto1-gestion.jpg',  // 👈 Reemplaza con tu ruta
+          src: 'src\\images\\proyecto1_inventario.PNG',  // 👈 Reemplaza con tu ruta
           caption: 'Administración de inventario y transferencias'
         }
       ],
@@ -60,21 +60,19 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Título de tu segundo proyecto',
-      subtitle: 'Categoría o contexto',
-      role: 'Tu rol principal',
-      description: 'Descripción breve y directa del proyecto. Qué problema resuelve y para quién. Máximo 2-3 líneas que capturen lo esencial.',
-      technologies: ['Tech1', 'Tech2', 'Tech3', 'Tech4'],
-      githubUrl: 'https://github.com/tu-usuario/proyecto',
-      demoUrl: 'https://demo.com',
+      title: 'PETNET ',
+      subtitle: 'Plataforma de Adopción de Mascotas',
+      role: 'QA Analyst & Functional Analyst',
+      description: 'Participé como QA en el proyecto PetNet, encargándome de la creación y documentación de casos de prueba. Ejecuté pruebas manuales sobre el frontend para validar flujos, funcionalidades y experiencia de usuario, y pruebas automatizadas en el backend para verificar la correcta lógica y respuesta de los servicios. Además, realicé el reporte y seguimiento de errores, colaborando con el equipo de desarrollo para su análisis y corrección.',
+      technologies: ['JUnit', 'Selenium', 'Jest', 'Supertest'],
       featured: true,
       images: [
-        { src: '/src/assets/images/proyecto2-screenshot1.jpg', caption: 'Pantalla principal de la aplicación' },
-        { src: '/src/assets/images/proyecto2-screenshot2.jpg', caption: 'Funcionalidad clave del sistema' },
-        { src: '/src/assets/images/proyecto2-screenshot3.jpg', caption: 'Panel de administración' }
+        { src: 'src\\images\\casosprueba.png', caption: 'Creación de casos de prueba automatizados y manuales' },
+        { src: 'src\\images\\resultados.png', caption: 'Algunos resultados obtenidos' },
+        { src: 'src\\images\\test1.png', caption: 'Testing Automatizado' }
       ],
       details: {
-        context: 'Contexto del proyecto: para quién, por qué, cuál era la necesidad inicial.',
+        context: 'PetNet es una aplicación creada para facilitar el proceso de adopción de mascotas, permitiendo publicar animales en adopción y conectar a personas interesadas en adoptar con refugios y particulares. El objetivo del proyecto es centralizar la información, mejorar la visibilidad de los animales en adopción y agilizar un proceso que normalmente se realiza de forma desorganizada o informal.',
         challenges: [
           'Desafío técnico 1',
           'Desafío técnico 2',
