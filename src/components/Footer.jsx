@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <p className="footer-text">
-            Diseñado y desarrollado por <strong>[Tu Nombre]</strong>
+            Diseñado y desarrollado por <strong>Osvaldo Exequiel Barcos</strong>
           </p>
           <p className="footer-copyright">
             © {currentYear} Todos los derechos reservados
