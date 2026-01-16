@@ -30,7 +30,7 @@ const About = () => {
 
             <p className="about-paragraph">
               Cuento además con conocimientos en desarrollo web frontend y backend 
-              (<strong>React, Node.js, Express, MySQL y SQLite</strong>), lo que me permite una visión integral del sistema 
+              como <strong>React, Node.js, Express, MySQL, etc.</strong> Lo que me permite una visión integral del sistema 
               y una mejor comunicación con equipos de desarrollo. También he participado en proyectos de 
               Inteligencia Artificial y visión por computadora.
             </p>
